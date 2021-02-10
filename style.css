@@ -32,7 +32,7 @@ h2 {
   font-size: 70px;
   text-align: center;
   padding: 20px 0;
-  font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
 }
 
 input {
@@ -50,7 +50,7 @@ input {
   font-weight: bold;
 }
 
-.container { 
+.container {
   margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
@@ -73,8 +73,7 @@ button {
 
 footer {
   width: 100%;
-  position: fixed;
-  bottom: 0;
+  margin-top: 75px;
 }
 
 footer p {
@@ -85,12 +84,4 @@ footer p {
 
 footer a {
   color: lightgray;
-}
-
-.show {
-  display: block;
-}
-
-.hide {
-  display: none;
 }
