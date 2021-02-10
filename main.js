@@ -47,7 +47,7 @@ const app = () => {
   };
 
   userInput.addEventListener("keyup", function () {
-    if (this.value == word.textContent) {
+    if (this.value.toLowerCase() == word.textContent) {
       updateScore();
       clear();
       newWord();
