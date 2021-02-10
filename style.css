@@ -32,7 +32,7 @@ h2 {
   font-size: 70px;
   text-align: center;
   padding: 20px 0;
-  font-family: Lato;
+  font-family: 'Courgette', cursive;
 }
 
 input {
@@ -49,10 +49,11 @@ input {
   font-weight: bold;
 }
 
-.container {
+.container { 
   margin-top: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #timeLeft::before {
