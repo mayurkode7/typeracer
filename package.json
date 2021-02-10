@@ -1,0 +1,28 @@
+{
+  "name": "typeracer",
+  "version": "1.0.0",
+  "description": "Game to improve your typing skills",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayurkode7/typeracer.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Game"
+  ],
+  "author": "Mayur Kode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayurkode7/typeracer/issues"
+  },
+  "homepage": "https://github.com/mayurkode7/typeracer#readme",
+  "dependencies": {
+    "random-words": "^1.1.1"
+  }
+}
