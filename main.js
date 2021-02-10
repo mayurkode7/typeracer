@@ -2,15 +2,17 @@
 const randomWords = require('random-words');
 let word = document.querySelector("#word");
 const userInput = document.querySelector("#userInput");
+const overText = document.querySelector("#overLbl");
 const timeLeftLbl = document.querySelector("#timeLeft");
 const scoreLbl = document.querySelector("#score");
 const resetBtn = document.querySelector("#resetBtn");
 let score = 0;
 let timer = 5;
 const app = () => {
-  let newGameInteval;
+  let newGameInterval;
   userInput.focus();
   scoreLbl.textContent = score;
+
 
   const resetTimer = () => {
     timer = 5;
@@ -25,7 +27,8 @@ const app = () => {
     timeLeftLbl.textContent = timer;
     if (timer == 0) {
       clearInterval(timerInterval);
-      if (newGameInteval) clearInterval(newGameInteval);
+      overText.style.display = "block"
+      if (newGameInterval) clearInterval(newGameInterval);
       userInput.disabled = true;
     }
   };
@@ -53,16 +56,22 @@ const app = () => {
   });
 
   const startGame = () => {
-    resetTimer();
-    score = 0;
-    scoreLbl.textContent = score;
-    timeLeftLbl.textContent = timer;
-    userInput.disabled = false;
-    userInput.focus();
-    newGameInteval = setInterval(updateTimer, 1000);
+    if (timer === 0) {
+      resetTimer();
+      score = 0;
+      scoreLbl.textContent = score;
+      timeLeftLbl.textContent = timer;
+      userInput.disabled = false;
+      overText.style.display = "none"
+      userInput.focus();
+      newGameInterval = setInterval(updateTimer, 1000);
+    } else {
+      console.log('game is on')
+    }
+
   };
 
-  resetBtn.addEventListener("click", function () {
+  resetBtn.addEventListener("click", function (event) {
     startGame();
   });
 };

@@ -8,17 +8,30 @@
     <title>Type Racer</title>
   </head>
   <body>
-    <h1>Type Racer</h1>
+    <main>
+      <h1>Type Racer</h1>
 
-    <h2 id="word">word</h2>
+      <p class="note">Type the given word in 5 seconds</p>
 
-    <input id="userInput" type="text" placeholder="start typing " />
+      <h2 id="word">word</h2>
 
-    <p id="timeLeft">5</p>
+      <input id="userInput" type="text" placeholder="start typing " />
+      <span class="overTxt" id="overLbl">Game Over!!</span>
 
-    <p id="score">0</p>
+      <section class="container">
+        <p id="timeLeft">5</p>
 
-    <button id="resetBtn">New Game</button>
+        <p id="score">0</p>
+      </section>
+
+      <button id="resetBtn">New Game</button>
+    </main>
+    <footer>
+      <p>
+        Made with <span style="color: #e25555">&#9829;</span> in India by
+        <a href="https://www.linkedin.com/in/mayur-kode-0035b480/"> Mayur </a>
+      </p>
+    </footer>
   </body>
   <!-- create using node module http://browserify.org/ -->
   <script src="bundle.js"></script>
